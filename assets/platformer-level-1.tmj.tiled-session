@@ -1,0 +1,47 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4
+        },
+        "platformer-level-1.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 444.33333333333337,
+                "y": 339.66666666666663
+            }
+        },
+        "platformer-level-1.tmx#tilemap_packed": {
+            "scaleInDock": 2
+        }
+    },
+    "last.exportedFilePath": "C:/cmpm120/plat3/assets",
+    "last.imagePath": "C:/cmpm120/plat3/assets",
+    "map.height": 25,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 18,
+    "map.tileWidth": 18,
+    "map.width": 140,
+    "openFiles": [
+    ],
+    "project": "platformer-level-1.tmj.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "platformer-level-1.tmx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.tileSize": {
+        "height": 18,
+        "width": 18
+    }
+}
