@@ -12,6 +12,9 @@ class Platformer extends Phaser.Scene {
         this.PARTICLE_VELOCITY = 50;
         this.SCALE = 2.0;
     }
+     preload() {
+  this.load.scenePlugin('AnimatedTiles', './lib/AnimatedTiles.js', 'animatedTiles', 'animatedTiles');
+     }
 
     create() {
 
@@ -245,6 +248,29 @@ this.runSoundPlaying = false;
     
         });
 
+        
+    this.waterEmitters = [];
+    this.waterTiles.forEach(tile => {
+        let emitter =this.add.particles(tile.pixelX,tile.pixelY,"kenny-particles",{
+                 frame: [`circle_01.png`],
+            // TODO: Try: add random: true
+            scale:0.015,
+            // TODO: Try: maxAliveParticles: 8,
+            lifespan: 1000,
+            // TODO: Try: gravityY: -400,
+            alpha: {start: 1, end: 0}, 
+             quantity: 1,
+             speedY: { min: -30, max: -60 },
+             frequency: 500,
+
+
+
+        })
+          
+        this.waterEmitters.push(emitter);
+    });
+
+
 
 
 
@@ -320,6 +346,8 @@ this.runSoundPlaying = false;
          this.cameras.main.setDeadzone(50, 50);
         this.cameras.main.setZoom(this.SCALE);
         this.physics.world.setBounds(0, 0, this.map.widthInPixels, this.map.heightInPixels);
+         this.animatedTiles.init(this.map);
+
     }
 
     update() {
